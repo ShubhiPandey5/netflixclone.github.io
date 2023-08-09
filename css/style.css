@@ -1,0 +1,94 @@
+.button {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0px 15px;
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    font-weight: 900;
+    transition-duration: .2s;
+  }
+  
+  .game path {
+    color: white;
+  }
+  
+  .button .arrow {
+    position: absolute;
+    right: 0;
+    padding: 0px 5px;
+    width: 30px;
+    height: 100%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button:hover,
+  .button:focus {
+    background-color: black;
+    transition-duration: .2s;
+  }
+  
+  .button:hover .arrow {
+    animation: slide-right .6s ease-out both;
+  }
+  /* arrow animation */
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .button:active {
+    transform: translate(1px , 1px);
+    transition-duration: .2s;
+  }
+  button {
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  }
+  
+  button::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+  button:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  button:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
